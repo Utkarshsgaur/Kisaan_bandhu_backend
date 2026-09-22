@@ -1,0 +1,27 @@
+# Maven build output
+target/
+*.jar
+*.war
+*.class
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Environment variables / secrets — DO NOT COMMIT
+.env
+.env.local
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/

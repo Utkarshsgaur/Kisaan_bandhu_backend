@@ -1,0 +1,2 @@
+package com.procurement.controller; import com.procurement.entity.Booking; import com.procurement.service.BookingService; import org.springframework.web.bind.annotation.*; import java.util.List;
+@RestController @RequestMapping("/api/v1/operator") public class OperatorController {private final BookingService s;public OperatorController(BookingService s){this.s=s;} @GetMapping("/queue") public List<Booking> queue(@RequestParam Long scheduleId){return s.scheduleBookings(scheduleId);} }

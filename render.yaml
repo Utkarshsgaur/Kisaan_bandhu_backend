@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: kisan-bandhu-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: SERVER_PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRATION_MS
+        value: 3600000
+      - key: FRONTEND_ORIGIN
+        value: https://kisan-bandhu.vercel.app
+      - key: OTP_DEV_MODE
+        value: "true"
+      - key: AVG_PROCESSING_MINUTES
+        value: "5"
+    healthCheckPath: /api/v1/auth/ping
