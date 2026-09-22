@@ -7,12 +7,18 @@ services:
     envVars:
       - key: SERVER_PORT
         value: 10000
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_EXPIRATION_MS
         value: 3600000
       - key: FRONTEND_ORIGIN
-        value: https://kisan-bandhu.vercel.app
+        value: https://kisan-bandhu-fronted.vercel.app
       - key: OTP_DEV_MODE
         value: "true"
       - key: AVG_PROCESSING_MINUTES
