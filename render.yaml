@@ -18,7 +18,7 @@ services:
       - key: JWT_EXPIRATION_MS
         value: 3600000
       - key: FRONTEND_ORIGIN
-        value: https://kisan-bandhu-fronted.vercel.app
+        value: https://kisanbandhu-two.vercel.app
       - key: OTP_DEV_MODE
         value: "true"
       - key: AVG_PROCESSING_MINUTES
